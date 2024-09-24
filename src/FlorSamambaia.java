@@ -6,8 +6,17 @@ public class FlorSamambaia{
         int distanciaX = x2 - x1;
         int distanciaY = y2 - y1;
 
+        double distanciaQuadrada = distanciaX * distanciaX + distanciaY * distanciaY;
 
-        return "";
+        double r1Quadrado = r1 * r1;
+        double r2Quadrado = r2 * r2;
+
+        if(distanciaQuadrada <= r1Quadrado - r2Quadrado){
+            return "RICO";
+
+        }else{
+            return "MORTO";
+        }
 
     }
 
